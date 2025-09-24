@@ -1,0 +1,51 @@
+//Exercise - Print Percentage
+
+using UnityEngine;
+
+public class PrintPercent : MonoBehaviour
+{
+    // This script calculates the percentage of a score relative to the maximum score
+    void Start()
+    {
+        // Declare a constant for the maximum score
+        const int MaxScore = 100;
+
+        // Example: current score = 75
+        int score = 75;
+
+        // Calculate the percentage
+        float percent = ((float)score / MaxScore) * 100f;
+
+        // Print the result in the Unity Console
+        Debug.Log("Score percent: " + percent + "%");
+    }
+}
+
+
+//Exercise - Trigonometry (Cosine & Sine)
+
+using System;
+
+namespace Exercise6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Prompt the user for an angle in degrees
+            Console.Write("Enter an angle in degrees: ");
+            float angleDegrees = float.Parse(Console.ReadLine());
+
+            // Convert degrees to radians
+            float angleRadians = (float)(angleDegrees * Math.PI / 180.0);
+
+            // Calculate cosine and sine
+            double cosine = Math.Cos(angleRadians);
+            double sine = Math.Sin(angleRadians);
+
+            // Display the results
+            Console.WriteLine("Cosine: " + cosine);
+            Console.WriteLine("Sine: " + sine);
+        }
+    }
+}
