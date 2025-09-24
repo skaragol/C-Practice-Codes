@@ -1,0 +1,87 @@
+// Exercise 8 – Rolling the Dice
+
+using System;
+
+namespace Exercise8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // ================================
+            // Exercise 8: Rolling the Dice
+            // This program demonstrates how to:
+            // 1. Create two dice using the Die class
+            // 2. Roll each die
+            // 3. Print the values shown on top
+            // 4. Print the sum of the two dice
+            // ================================
+
+            // Problem 1 - Create two dice
+            // We use the Die constructor to create new six-sided dice
+            Die die1 = new Die(6);
+            Die die2 = new Die(6);
+
+            // Problem 2 - Roll the dice
+            // Each die object rolls itself with the Roll() method
+            die1.Roll();
+            die2.Roll();
+
+            // Problem 3 - Print top sides and their sum
+            // The TopSide property gives the value currently facing up
+            int top1 = die1.TopSide;
+            int top2 = die2.TopSide;
+
+            // Calculate sum
+            int sum = top1 + top2;
+
+            // Print results
+            Console.WriteLine("Die 1 rolled: " + top1);
+            Console.WriteLine("Die 2 rolled: " + top2);
+            Console.WriteLine("Sum of dice: " + sum);
+        }
+    }
+}
+
+// Exercise 9 – Look at the Cards
+
+using System;
+
+namespace Exercise9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // ================================
+            // Exercise 9: Look at the Cards
+            // This program demonstrates how to:
+            // 1. Create a deck and print it
+            // 2. Shuffle the deck and print it
+            // 3. Take two cards from the deck and print their ranks and suits
+            // ================================
+
+            // Problem 1 - Create a deck and tell it to print itself
+            Deck deck = new Deck();       // Create a new deck
+            deck.Print();                 // Print all cards in order
+
+            Console.WriteLine(); // blank line for readability
+
+            // Problem 2 - Shuffle and print
+            deck.Shuffle();               // Shuffle the deck
+            deck.Print();                 // Print the shuffled deck
+
+            Console.WriteLine(); // blank line for readability
+
+            // Problem 3 - Take two cards from the deck
+            // TakeTopCard() removes and returns the top card as a Card object
+            Card card1 = deck.TakeTopCard();
+            Card card2 = deck.TakeTopCard();
+
+            // Print their rank and suit using properties
+            Console.WriteLine("First card: " + card1.Rank + " of " + card1.Suit);
+            Console.WriteLine("Second card: " + card2.Rank + " of " + card2.Suit);
+        }
+    }
+}
+
