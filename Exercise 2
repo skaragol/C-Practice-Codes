@@ -49,3 +49,68 @@ namespace Exercise6
         }
     }
 }
+
+
+//Exercise - Temperature Conversion
+
+using UnityEngine;
+
+public class ConvertTemperatures : MonoBehaviour
+{
+    // This script converts temperatures between Fahrenheit and Celsius
+    void Start()
+    {
+        // ===== Problem 1: Using int =====
+        Debug.Log("=== Using int ===");
+        int originalF_int, celsius_int, backToF_int;
+
+        // Test with 0°F
+        originalF_int = 0;
+        Debug.Log("Original Fahrenheit: " + originalF_int);
+        celsius_int = (originalF_int - 32) * 5 / 9;
+        Debug.Log("Converted to Celsius: " + celsius_int);
+        backToF_int = celsius_int * 9 / 5 + 32;
+        Debug.Log("Converted back to Fahrenheit: " + backToF_int);
+
+        // Test with 32°F
+        originalF_int = 32;
+        Debug.Log("Original Fahrenheit: " + originalF_int);
+        celsius_int = (originalF_int - 32) * 5 / 9;
+        Debug.Log("Converted to Celsius: " + celsius_int);
+        backToF_int = celsius_int * 9 / 5 + 32;
+        Debug.Log("Converted back to Fahrenheit: " + backToF_int);
+
+        // Test with 212°F
+        originalF_int = 212;
+        Debug.Log("Original Fahrenheit: " + originalF_int);
+        celsius_int = (originalF_int - 32) * 5 / 9;
+        Debug.Log("Converted to Celsius: " + celsius_int);
+        backToF_int = celsius_int * 9 / 5 + 32;
+        Debug.Log("Converted back to Fahrenheit: " + backToF_int);
+
+
+        // ===== Problem 2: Using float =====
+        Debug.Log("=== Using float ===");
+        float originalF_float, celsius_float, backToF_float;
+
+        originalF_float = 0f;
+        Debug.Log("Original Fahrenheit: " + originalF_float);
+        celsius_float = (originalF_float - 32f) * 5f / 9f;
+        Debug.Log("Converted to Celsius: " + celsius_float);
+        backToF_float = celsius_float * 9f / 5f + 32f;
+        Debug.Log("Converted back to Fahrenheit: " + backToF_float);
+
+
+        // ===== Problem 3: Using double =====
+        Debug.Log("=== Using double ===");
+        double originalF_double, celsius_double, backToF_double;
+
+        originalF_double = 0.0;
+        Debug.Log("Original Fahrenheit: " + originalF_double);
+        celsius_double = (originalF_double - 32.0) * 5.0 / 9.0;
+        Debug.Log("Converted to Celsius: " + celsius_double);
+        backToF_double = celsius_double * 9.0 / 5.0 + 32.0;
+        Debug.Log("Converted back to Fahrenheit: " + backToF_double);
+    }
+}
+
