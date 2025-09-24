@@ -1,0 +1,37 @@
+//Distance and Angle Calculation : Calculates the distance between two points and the angle you’d need to rotate from point 1 to face point 2.
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string line;
+        // Keep running until the user types "q"
+        while ((line = Console.ReadLine()) != "q")
+        {
+            // Split the input into 4 floats (x1, y1, x2, y2)
+            string[] parts = line.Split(' ');
+            float point1X = float.Parse(parts[0]);
+            float point1Y = float.Parse(parts[1]);
+            float point2X = float.Parse(parts[2]);
+            float point2Y = float.Parse(parts[3]);
+
+            // 1. Calculate delta X and delta Y
+            float deltaX = point2X - point1X;
+            float deltaY = point2Y - point1Y;
+
+            // 2. Calculate distance using Pythagorean theorem
+            float distance = (float)Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
+
+            // 3. Calculate angle in radians using Atan2
+            float angleRadians = (float)Math.Atan2(deltaY, deltaX);
+
+            // 4. Convert angle from radians to degrees
+            float angleDegrees = angleRadians * (180f / (float)Math.PI);
+
+            // 5. Print ONLY distance and angle (exact format required)
+            Console.WriteLine(distance + " " + angleDegrees);
+        }
+    }
+}
