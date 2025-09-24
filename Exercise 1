@@ -1,0 +1,48 @@
+//Exercise 3 – Variables & Output
+
+using System;
+
+namespace Exercise3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 1. Declare an int variable named age
+            int age;
+
+            // 2. Assign your own age to this variable
+            age = 22; // replace with your own age if you want
+
+            // 3. Print the variable value to the console
+            Console.WriteLine("My age is: " + age);
+        }
+    }
+}
+
+//Exercise 4 – Altitude Change
+
+using System;
+
+namespace Exercise4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Prompt for and get the first altitude
+            Console.Write("Enter first altitude: ");
+            int firstAltitude = int.Parse(Console.ReadLine());
+
+            // Prompt for and get the second altitude
+            Console.Write("Enter second altitude: ");
+            int secondAltitude = int.Parse(Console.ReadLine());
+
+            // Calculate the altitude change (order matters)
+            int altitudeChange = secondAltitude - firstAltitude;
+
+            // Display the result
+            Console.WriteLine("Altitude change: " + altitudeChange);
+        }
+    }
+}
