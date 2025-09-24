@@ -1,0 +1,22 @@
+using System;
+
+namespace ProgrammingAssignment1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // This program prints the first 10 chemical element symbols
+            Console.WriteLine("H");   // Hydrogen
+            Console.WriteLine("He");  // Helium
+            Console.WriteLine("Li");  // Lithium
+            Console.WriteLine("Be");  // Beryllium
+            Console.WriteLine("B");   // Boron
+            Console.WriteLine("C");   // Carbon
+            Console.WriteLine("N");   // Nitrogen
+            Console.WriteLine("O");   // Oxygen
+            Console.WriteLine("F");   // Fluorine
+            Console.WriteLine("Ne");  // Neon
+        }
+    }
+}
