@@ -1,0 +1,100 @@
+//Exercise 11
+
+using UnityEngine;
+
+/// <summary>
+/// Makes the Yellow Teddy Bear 4 times as large (width and height)
+/// </summary>
+public class YellowTeddyBear : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        // quadruple width and height
+        Vector3 newScale = transform.localScale;
+        newScale.x *= 4;
+        newScale.y *= 4;
+        transform.localScale = newScale;
+    }
+}
+
+
+using UnityEngine;
+
+/// <summary>
+/// Makes the Green Teddy Bear 3 times as tall (normal width)
+/// </summary>
+public class GreenTeddyBear : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        // triple height only
+        Vector3 newScale = transform.localScale;
+        newScale.y *= 3;
+        transform.localScale = newScale;
+    }
+}
+
+
+using UnityEngine;
+
+/// <summary>
+/// Makes the Purple Teddy Bear 3 times as wide (normal height)
+/// </summary>
+public class PurpleTeddyBear : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        // triple width only
+        Vector3 newScale = transform.localScale;
+        newScale.x *= 3;
+        transform.localScale = newScale;
+    }
+}
+
+
+
+//Exercise 12
+
+using UnityEngine;
+
+/// <summary>
+/// Moves a GameObject with a Rigidbody2D by applying an impulse force
+/// </summary>
+public class Mover : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        // get the game object moving
+        // GetComponent<Rigidbody2D>() finds the Rigidbody2D attached to this GameObject
+        // AddForce applies a force vector (x = horizontal, y = vertical)
+        // ForceMode2D.Impulse means we instantly "kick" the object, instead of applying continuous force
+        GetComponent<Rigidbody2D>().AddForce(
+            new Vector2(0, 5), 
+            ForceMode2D.Impulse);
+    }
+}
+
+
+//Exercise 13
+
+using UnityEngine;
+
+/// <summary>
+/// Controls teddy bear movement
+/// </summary>
+public class TeddyBear : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        // make the teddy bear move to the right at a reasonable speed
+        // we use Rigidbody2D and apply a velocity
+        GetComponent<Rigidbody2D>().velocity = new Vector2(3, 0);
+        // Vector2(3, 0) means move right at speed 3 units/second
+    }
+}
+
